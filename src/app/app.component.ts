@@ -9,7 +9,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
   template: `
     <div class="shell">
       <aside>
-        <h2>IR Dashboard</h2>
+        <h2 style="color:red">IR DASHBOARD UPDATED</h2>
         <a routerLink="/dashboard">Dashboard</a>
         <a routerLink="/incidents">Incidents</a>
         <a routerLink="/incident-response">Incident Response</a>

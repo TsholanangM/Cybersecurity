@@ -1,12 +1,14 @@
-/* Global app styles for layout and base theming. */
-:root {
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-  color: #0f172a;
-  background: #f8fafc;
+/* Global styles */
+* {
+  box-sizing: border-box;
 }
 
-body {
+html, body {
+  height: 100%;
   margin: 0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: #f8fafc;
+  color: #0f172a;
 }
 
 .shell {
@@ -30,4 +32,35 @@ aside a {
 
 main {
   padding: 1.25rem;
+}
+
+.status {
+  border-left: 5px solid #00ff88;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { border-color: #00ff88; }
+  50% { border-color: #ffcc00; }
+  100% { border-color: #00ff88; }
+}
+
+.error-box {
+  background: #ff1a1a;
+  color: white;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .shell {
+    grid-template-columns: 1fr;
+  }
+
+  aside {
+    display: none;
+  }
 }
